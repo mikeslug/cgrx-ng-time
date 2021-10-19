@@ -1,0 +1,40 @@
+.entry {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgb(1 0 6 / 8%);
+}
+.entry.reminder {
+  border-left: 5px solid green;
+}
+.entry h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry-wrap .entry-left {
+  width: 15%;
+}
+.entry-wrap .entry-center {
+  flex: 1;
+}
+.entry-wrap .entry-right {
+  width: 5%;
+  text-align: right;
+}
+.entry-project {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.entry-notes {
+  font-size: 0.9rem;
+}

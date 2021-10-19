@@ -1,0 +1,9 @@
+<header>
+  <img class="logo" src="/assets/images/logo.png" />
+  <app-button
+    *ngIf="hasRoute('/')"
+    color="{{ showAddEntry ? 'red' : 'green' }}"
+    text="{{ showAddEntry ? 'X' : 'Add Entry' }}"
+    (btnClick)="toggleAddEntry()"
+  ></app-button>
+</header>

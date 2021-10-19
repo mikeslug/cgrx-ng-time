@@ -1,0 +1,35 @@
+<div
+  [ngClass]="{ reminder: entry.reminder }"
+  class="entry"
+  (dblclick)="onToggle(entry)"
+>
+  <div class="entry-wrap">
+    <div class="entry-left">
+      <h3>
+        {{ entry.date }}
+      </h3>
+      <p class="entry-time" *ngIf="entry.hours">
+        {{ entry.hours }} : {{ entry.minutes }}
+      </p>
+      <p class="entry-payType" *ngIf="entry.payType">{{ entry.payType }}</p>
+    </div>
+    <div class="entry-center">
+      <p class="entry-project">{{ entry.project }}</p>
+
+      <p class="entry-notes" *ngIf="entry.notes">{{ entry.notes }}</p>
+    </div>
+    <div class="entry-right">
+      <fa-icon
+        [ngStyle]="{ color: '#C22134' }"
+        [icon]="faTimes"
+        (click)="onDelete(entry)"
+      ></fa-icon>
+      <br />
+      <fa-icon
+        [ngStyle]="{ color: '#C22134' }"
+        [icon]="faEdit"
+        (click)="toggleEditEntry(entry)"
+      ></fa-icon>
+    </div>
+  </div>
+</div>

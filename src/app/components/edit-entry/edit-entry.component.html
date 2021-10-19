@@ -1,0 +1,80 @@
+<form *ngIf="showEditEntry" class="edit-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="date">Date</label>
+    <input
+      type="date"
+      name="date"
+      [(ngModel)]="date"
+      id="date"
+      placeholder="Select Date"
+    />
+  </div>
+  <div class="form-control">
+    <label for="project">Project</label>
+    <select
+      class="form-control"
+      [(ngModel)]="project"
+      name="project"
+      id="project"
+      required
+    >
+      <option
+        *ngFor="let proj of projects"
+        [value]="proj"
+        placeholder="Select Project"
+      >
+        {{ proj }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label for="payType">Pay Type</label>
+    <select
+      class="form-control"
+      [(ngModel)]="payType"
+      name="payType"
+      id="payType"
+      required
+    >
+      <option
+        *ngFor="let type of payTypes"
+        [value]="type"
+        placeholder="Select Pay Type"
+      >
+        {{ type }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-control form-control-check">
+    <label for="hours">Hours</label>
+    <input
+      type="number"
+      name="hours"
+      [(ngModel)]="hours"
+      id="hours"
+      placeholder="0"
+    />
+    <label for="minutes">Minutes</label>
+    <input
+      type="number"
+      name="minutes"
+      [(ngModel)]="minutes"
+      id="minutes"
+      placeholder="0"
+    />
+  </div>
+  <div class="form-control">
+    <label for="notes">Notes</label>
+    <textarea
+      name="notes"
+      rows="6"
+      cols="50"
+      [(ngModel)]="notes"
+      id="notes"
+    ></textarea>
+  </div>
+
+  <input type="submit" value="Save Entry" class="btn btn-block" />
+</form>

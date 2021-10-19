@@ -1,0 +1,9 @@
+<app-add-entry (onAddEntry)="addEntry($event)"></app-add-entry>
+<app-edit-entry (onEditEntry)="editEntry($event)"></app-edit-entry>
+<app-entry-item
+  *ngFor="let entry of entries"
+  [entry]="entry"
+  (onDeleteEntry)="deleteEntry(entry)"
+  (onEditEntry)="toggleEditEntry(entry)"
+  (onToggleReminder)="toggleReminder(entry)"
+></app-entry-item>

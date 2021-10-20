@@ -22,6 +22,14 @@
       "minutes": 30,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed iaculis nisl, sit amet aliquam erat. Nullam sit amet enim eros. Nunc at felis velit. In aliquet libero vestibulum ultricies convallis. Aenean ut purus quam. Mauris faucibus lectus vitae ante blandit commodo. Sed ornare dui ac risus auctor cursus. Nunc in elementum diam, vel convallis nisi.",
       "id": 6
+    },
+    {
+      "project": "WCON-TDS",
+      "payType": "REG",
+      "reminder": false,
+      "date": "2021-10-22",
+      "timer": false,
+      "id": 7
     }
   ]
 }
